@@ -22,11 +22,9 @@ Assignment_op = "="
 Operators = {Arithmeric_op}|{Rel_op}|{Equality_op}|{Logical_op}|{Assignment_op}
 
 // Seperators
-
 Seperators = [\{|\}|\(|\)|\[|\]|\;|\,]
 
 // Literals
-
 Digits = [0-9]
 // Int
 Int = {Digits}+
@@ -43,6 +41,7 @@ Quote = \"
 String = {Quote} ({Letter} | {Digits} | {WhiteSpace})* {Quote}
 Literals = {Int}|{Float}|{Boolean}|{String}
 
+//UserCode
 %{
     StringBuffer string = new StringBuffer();
     public static File file = new File("output.txt");
